@@ -1,0 +1,15 @@
+
+Data Cleaning and Transformation Summary:
+
+1. Removed duplicates based on 'encounter_id'.
+2. Standardized categorical variables:
+   - 'readmitted': Mapped to 'Readmitted' and 'Not Readmitted'.
+   - 'change': Standardized to 'Change' and 'No Change'.
+   - 'weight': Transformed to binary flag: 'Weight Provided' or 'Unknown'.
+3. Replaced missing values and standardized 'admission_type_id' using IDS_mapping.
+4. Flagged outliers in numerical fields (e.g., 'time_in_hospital') using IQR method.
+5. Replaced outlier values with column medians for consistency.
+6. Validated logical consistency between:
+   - 'admission_type_id' and 'admission_source_id'.
+   - 'time_in_hospital' and complexity indicators.
+7. Exported cleaned datasets for analysis.
